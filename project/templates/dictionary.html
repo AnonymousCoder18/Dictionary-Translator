@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dictionary</title>
+        <link rel="stylesheet" href="static/css/dictionary.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+    {% load static %}
+    <body style="background-image:url('{% static 'img/login.jpg' %}'); background-repeat: no-repeat; background-size: 100%;  background-position: 25% 25%;">
+
+        <nav>
+            <div class="wrap">
+              <div class="logo"> Dictionary/Translator</div>
+              <ul>
+                <li><a class="active" href = "/LogOut"> Log Out</a></li>
+                <li><a href = "/meaning"> Dictionary</a></li>
+                <li><a href = "/translate"> Translator</a></li>
+              </ul>
+            </div>
+          </nav>
+
+        <div class="wrapper">
+           <header>English Dictionary</header> 
+            <div class="search">
+                <input type="text" placeholder="Search a Word" required>
+                <i class="fas fa-search"></i>
+                <span class="material-icons">close</span>
+            </div>
+            <p class="info-text">Type a word and press enter to get the meaning</p>
+            <ul>
+                <li class="word">
+                    <div class="details">
+                        <p>_</p>
+                        <span>__</span>
+                    </div>
+                    <i class="fas fa-volume-up"></i>
+                </li>
+                <div class="content">
+                    <li class="meaning">
+                        <div class="details">
+                            <p>Meaning</p>
+                            <span>___</span>
+                        </div>
+                    </li>
+                    <li class="example">
+                        <div class="details">
+                            <p>Example</p>
+                            <span>___</span>
+                        </div>
+                    </li>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+       {% load static %}
+       <script type="text/javascript" src="{% static 'js/dictionary.js' %}"></script>
+
+    </body>
+</html>
